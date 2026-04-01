@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Конаев қаласы</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            text-align: center;
+            color: white;
+        }
+
+        h1 {
+            margin-top: 20px;
+        }
+
+        .container {
+            margin-top: 30px;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            margin: 10px;
+            border: none;
+            border-radius: 10px;
+            background: #222;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: orange;
+            transform: scale(1.1);
+        }
+
+        img {
+            width: 350px;
+            margin-top: 20px;
+            border-radius: 15px;
+            display: none;
+            box-shadow: 0 0 15px black;
+        }
+
+        .text {
+            margin-top: 15px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>🌍 Қонаев қаласы</h1>
+<p class="text">Туристік қала — демалыс пен табиғаттың керемет орны</p>
+
+<div class="container">
+    <button class="btn" onclick="showPlace('sea')">🌊 Қапшағай теңізі</button>
+    <button class="btn" onclick="showPlace('park')">🌳 Демалыс паркі</button>
+    <button class="btn" onclick="showPlace('city')">🏙 Қала көрінісі</button>
+</div>
+
+<img id="image">
+
+<p id="info" class="text"></p>
+
+<script>
+function showPlace(place) {
+    let img = document.getElementById("image");
+    let text = document.getElementById("info");
+
+    img.style.display = "block";
+
+    if(place === "sea") {
+        img.src = "https://upload.wikimedia.org/wikipedia/commons/3/3a/Kapchagay_reservoir.jpg";
+        text.innerHTML = "Қапшағай теңізі — демалуға арналған ең танымал орын!";
+    }
+
+    if(place === "park") {
+        img.src = "https://upload.wikimedia.org/wikipedia/commons/6/6e/Park.jpg";
+        text.innerHTML = "Қаладағы демалыс паркі — тыныш әрі әдемі жер.";
+    }
+
+    if(place === "city") {
+        img.src = "https://upload.wikimedia.org/wikipedia/commons/5/5d/City_view.jpg";
+        text.innerHTML = "Қонаев қаласының заманауи көрінісі.";
+    }
+}
+</script>
+
+</body>
+</html>
